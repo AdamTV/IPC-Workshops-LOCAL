@@ -23,7 +23,7 @@ struct Employee {
 /* main program */
 int main(void) {
 
-	int i, emps = 0, option = 0;
+	int i, emps = 0, option = 0, empid;
 
 	// Declare a struct Employee array "emp" with SIZE elements 
 	// and initialize all elements to zero
@@ -90,9 +90,15 @@ int main(void) {
 			break;
 		case 3: //Updating Emplyee salary
 			printf("Update Employee Salary\n");
-			printf("======================");
-			do{}
-			while()
+			printf("======================\n");
+			do{
+			printf("Enter Employee ID: ");
+			scanf("%d", &empid);
+}
+			while(empid != emps.id);
+			printf("The current salary is: %lf", emps.salary);
+			printf("Enter Employee New Salary: ");
+			scanf("%lf", emps.salary);
 			break;
 		default:
 			printf("ERROR: Incorrect Option: Try Again\n\n");
