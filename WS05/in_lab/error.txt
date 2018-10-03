@@ -1,0 +1,5 @@
+emp_inlab.c: In function 'main':
+emp_inlab.c:30:9: warning: missing braces around initializer [-Wmissing-braces]
+  struct Employee emp[SIZE] = { 0, 0 };
+         ^
+emp_inlab.c:30:9: warning: (near initialization for 'emp[0]') [-Wmissing-braces]
