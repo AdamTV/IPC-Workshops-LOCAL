@@ -23,7 +23,7 @@ struct Employee {
 /* main program */
 int main(void) {
 
-	int j, i, emps = 0, option = 0, empid, EMPID;
+	int i, emps = 0, option = 0, empid;
 
 	// Declare a struct Employee array "emp" with SIZE elements 
 	// and initialize all elements to zero
