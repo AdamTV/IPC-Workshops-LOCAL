@@ -1,2 +1,4 @@
 ﻿  Source.c
-  Project1.vcxproj -> C:\Users\adams\source\repos\Project1\Debug\Project1.exe
+c:\users\adams\source\repos\github\ipc-workshops-local\project1\source.c(26): warning C4101: 'j': unreferenced local variable
+c:\users\adams\source\repos\github\ipc-workshops-local\project1\source.c(26): warning C4101: 'EMPID': unreferenced local variable
+  Project1.vcxproj -> C:\Users\adams\source\repos\GitHub\IPC-Workshops-LOCAL\Project1\Debug\Project1.exe

@@ -23,7 +23,7 @@ struct Employee {
 /* main program */
 int main(void) {
 
-	int i, emps = 0, option = 0, empid, EMPID;
+	int j, i, emps = 0, option = 0, empid, EMPID;
 
 	// Declare a struct Employee array "emp" with SIZE elements 
 	// and initialize all elements to zero
@@ -91,17 +91,37 @@ int main(void) {
 		case 3: //Updating Emplyee salary
 			printf("Update Employee Salary\n");
 			printf("======================\n");
+			i = 0;
 			do {
 				printf("Enter Employee ID: ");
 				scanf("%d", &empid);
-				for (i = 0; i < SIZE; i++) {
-					if (empid == emp[i].id) {
-						printf("The current salary is: %.2lf\n", emp[i].salary);
-						printf("Enter Employee New Salary: ");
-						scanf("%lf", &emp[i].salary);
-					}
+				while (empid != emp[i].id && i < SIZE)
+					i++;
+				if (empid != emp[i].id) {
+					printf("Invalid Employee ID/n");
 				}
-				
+			} while (empid != emp[i].id);
+			printf("The current salary is: %.2lf\n", emp[i].salary);
+			printf("Enter Employee New Salary: ");
+			scanf("%lf", &emp[i].salary);	
+			printf("\n");
+			break;
+		case 4:	
+			printf("Remove Employee\n");
+			printf("===============\n");
+			i = 0;
+			do {
+				printf("Enter Employee ID: ");
+				scanf("%d", &empid);
+				while (empid != emp[i].id && i < SIZE)
+					i++;
+				if (empid != emp[i].id) {
+					printf("Invalid Employee ID\n");
+				}
+			} while (empid != emp[i].id);
+			printf("Employee %d will be removed\n\n", emp[i].id);
+			emp[i].id = 0;
+			emps++; //Decrement the valid employee count by one
 			break;
 		default:
 			printf("ERROR: Incorrect Option: Try Again\n\n");
