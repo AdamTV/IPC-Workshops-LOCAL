@@ -95,10 +95,11 @@ int main(void) {
 			do {
 				printf("Enter Employee ID: ");
 				scanf("%d", &empid);
-				while (empid != emp[i].id && i < SIZE)
+				while (empid != emp[i].id && i < SIZE){
 					i++;
+				}
 				if (empid != emp[i].id) {
-					printf("Invalid Employee ID/n");
+					printf("*** ERROR: Employee ID not found! ***\n");
 				}
 			} while (empid != emp[i].id);
 			printf("The current salary is: %.2lf\n", emp[i].salary);
