@@ -91,11 +91,11 @@ int main(void) {
 		case 3: //Updating Emplyee salary
 			printf("Update Employee Salary\n");
 			printf("======================\n");
-			i = 0;
 			do {
+				i = 0;
 				printf("Enter Employee ID: ");
 				scanf("%d", &empid);
-				while (empid != emp[i].id && i < SIZE){
+				while (empid != emp[i].id && i < SIZE) {
 					i++;
 				}
 				if (empid != emp[i].id) {
@@ -110,8 +110,9 @@ int main(void) {
 		case 4:
 			printf("Remove Employee\n");
 			printf("===============\n");
-			i = 0;
+
 			do {
+				i = 0;
 				printf("Enter Employee ID: ");
 				scanf("%d", &empid);
 				while (empid != emp[i].id && i < SIZE)
