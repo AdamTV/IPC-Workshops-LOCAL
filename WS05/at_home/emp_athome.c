@@ -96,6 +96,7 @@ int main(void) {
 				scanf("%d", &empid);
 				while (empid != emp[i].id && i < SIZE) {
 					i++;
+					printf("id = %d", emp[i].id);
 				}
 			if (empid == emp[i].id)	{
 			printf("The current salary is: %.2lf\n", emp[i].salary);
