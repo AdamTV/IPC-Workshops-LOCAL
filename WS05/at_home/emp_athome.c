@@ -1,5 +1,4 @@
-/*
-Name:			ADAM STINZIANI
+/*Name:			ADAM STINZIANI
 Student number:	124521188
 Email:			astinziani@myseneca.ca
 Workshop:		05-home
@@ -98,14 +97,15 @@ int main(void) {
 				while (empid != emp[i].id && i < SIZE) {
 					i++;
 				}
-				if (empid != emp[i].id) {
-					printf("*** ERROR: Employee ID not found! ***\n");
-				}
-			} while (empid != emp[i].id);
+			if (empid == emp[i].id)	{
 			printf("The current salary is: %.2lf\n", emp[i].salary);
 			printf("Enter Employee New Salary: ");
 			scanf("%lf", &emp[i].salary);
 			printf("\n");
+			}
+			else
+			printf("*** ERROR: Employee ID not found! ***\n");
+			} while (empid != emp[i].id);
 			break;
 		case 4:
 			printf("Remove Employee\n");
