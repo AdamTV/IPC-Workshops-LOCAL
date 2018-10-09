@@ -118,7 +118,7 @@ int main(void) {
 				while (empid != emp[i].id && i < SIZE)
 					i++;
 				if (empid != emp[i].id) {
-					printf("Invalid Employee ID\n");
+					printf("*** ERROR: Employee ID not found! ***\n");
 				}
 			} while (empid != emp[i].id);
 			printf("Employee %d will be removed\n\n", emp[i].id);
