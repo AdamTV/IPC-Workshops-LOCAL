@@ -2,7 +2,7 @@
 Name:			ADAM STINZIANI
 Student number:	124521188
 Email:			astinziani@myseneca.ca
-Workshop:		05-home
+Workshop:		05-lab
 Section:		IPC144SVV
 Date:			2018-10-01
 */
@@ -27,7 +27,7 @@ int main(void) {
 
 	// Declare a struct Employee array "emp" with SIZE elements 
 	// and initialize all elements to zero
-	struct Employee emp[SIZE] = { 0, 0 };
+	struct Employee emp[SIZE] = { 0 , 0};
 
 	printf("---=== EMPLOYEE DATA ===---\n\n");
 

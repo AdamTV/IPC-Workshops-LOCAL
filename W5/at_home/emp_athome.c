@@ -94,20 +94,19 @@ int main(void) {
 				i = 0;
 				printf("Enter Employee ID: ");
 				scanf("%d", &empid);
-				while (empid != emp[i].id && i < SIZE) {
+				while (empid != emp[i].id && i < SIZE - 1)	//to check in array ONLY or else... 
 					i++;
-					printf("id = %d", emp[i].id);
+				if (empid != emp[i].id) {
+					printf("*** ERROR: Employee ID not found! ***\n");
 				}
-			if (empid == emp[i].id)	{
+			} while (empid != emp[i].id);
+
 			printf("The current salary is: %.2lf\n", emp[i].salary);
 			printf("Enter Employee New Salary: ");
 			scanf("%lf", &emp[i].salary);
 			printf("\n");
-			}
-			else
-			printf("*** ERROR: Employee ID not found! ***\n");
-			} while (empid != emp[i].id);
 			break;
+
 		case 4:
 			printf("Remove Employee\n");
 			printf("===============\n");
@@ -116,7 +115,7 @@ int main(void) {
 				i = 0;
 				printf("Enter Employee ID: ");
 				scanf("%d", &empid);
-				while (empid != emp[i].id && i < SIZE)
+				while (empid != emp[i].id && i < SIZE - 1) 
 					i++;
 				if (empid != emp[i].id) {
 					printf("*** ERROR: Employee ID not found! ***\n");
@@ -124,7 +123,7 @@ int main(void) {
 			} while (empid != emp[i].id);
 			printf("Employee %d will be removed\n\n", emp[i].id);
 			emp[i].id = 0;
-			emps++; //Decrement the valid employee count by one
+			emps--;	 //Decrement the valid employee count by one
 			break;
 		default:
 			printf("ERROR: Incorrect Option: Try Again\n\n");
