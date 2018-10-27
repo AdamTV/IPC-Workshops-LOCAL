@@ -1,0 +1,5 @@
+Script started on Fri 26 Oct 2018 11:07:55 PM EDT
+[?1034hbash-4.2$ exit
+exit
+
+Script done on Fri 26 Oct 2018 11:07:57 PM EDT

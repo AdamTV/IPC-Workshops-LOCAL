@@ -27,7 +27,7 @@ int main(void) {
 
 	// Declare a struct Employee array "emp" with SIZE elements 
 	// and initialize all elements to zero
-	struct Employee emp[SIZE] = { 0 , 0};
+	struct Employee emp[SIZE] = {{0}};
 
 	printf("---=== EMPLOYEE DATA ===---\n\n");
 
