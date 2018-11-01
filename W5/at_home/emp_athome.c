@@ -26,7 +26,7 @@ int main(void) {
 
 	// Declare a struct Employee array "emp" with SIZE elements 
 	// and initialize all elements to zero
-	struct Employee emp[SIZE] = { 0, 0, 0, 0 };
+	struct Employee emp[SIZE] = { {0} };
 
 	printf("---=== EMPLOYEE DATA ===---\n\n");
 
@@ -101,7 +101,7 @@ int main(void) {
 				}
 			} while (empid != emp[i].id);
 
-			printf("The current salary is: %.2lf\n", emp[i].salary);
+			printf("The current salary is %.2lf\n", emp[i].salary);
 			printf("Enter Employee New Salary: ");
 			scanf("%lf", &emp[i].salary);
 			printf("\n");
@@ -123,7 +123,7 @@ int main(void) {
 			} while (empid != emp[i].id);
 			printf("Employee %d will be removed\n\n", emp[i].id);
 			emp[i].id = 0;
-			emps--;	 //Decrement the valid employee count by one
+			emps = i;
 			break;
 		default:
 			printf("ERROR: Incorrect Option: Try Again\n\n");

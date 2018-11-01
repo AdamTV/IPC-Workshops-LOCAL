@@ -2,5 +2,5 @@
 lly as arrays. This is because a struct can contain parallel arrays, or whatever the user defines. I think parallel 
 arrays are more useful in localized situations where related data is required, meaning you won't need the data from
 the parallel arrays anywhere else in the project.
-2)Storing the source code for structs in header files is preferred because this allows us to use the struct inside
+2)Storing the source code for declarations of structs in header files is preferred because this allows us to use the struct inside
 each file we declare it in while being able to edit the members of the struct from one place.  
